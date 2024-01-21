@@ -1,0 +1,41 @@
+{{define "Edit"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/css/header.css">
+  <link rel="stylesheet" href="../static/css/create.css">
+</head>
+<body>
+  <div class="main-article">
+    <h2 id="article-title"> modifier l'aventurier  : </h2>
+    <div class="article-content">
+        <!-- form action="/addarticle/treatment" method="post" -->
+        <form action="/edit/editarticle" method="post">
+          <div class="article-input">
+            <label id="lab" for="Nom">Nom</label>
+            <input type="text" name="Nom" required autofocus>
+        </div>
+        <div class="article-input">
+            <label id="lab" for="Prenom">Prenom</label>
+            <input type="text" name="Prenom" required>
+        </div>
+        <div class="article-input">
+            <label id="lab" for="Equipe">Equipe:</label>
+            <input type="text" name="Equipe" required>
+        </div>
+        <div class="article-button">
+            <button type="submit">Submit</button>
+        </div>
+        <div class="article-button">
+            <a href="/admin">Cancel</a>
+        </div>
+        </form>
+    </div>
+  </div>
+
+</body>
+</html>
+{{end}}

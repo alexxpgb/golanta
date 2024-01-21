@@ -1,0 +1,36 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../static/css/style.css">
+ <link rel="stylesheet" href="../static/css/header.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="fixed">
+        <div class="header">
+            <div class="header-option">
+                <div class="nav">
+                    <a href="http://localhost:8080/create">Create</a>
+                    <h1>GOLANTA</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+  {{range .}}
+  <div class="character">
+  {{.Prenom}}
+  {{.Nom}}
+  <p><br>Equipe:</p>
+  {{.Equipe}}
+  <a href="/edit?id={{.Id}}" class="edit-link">Modifier</a>
+    <a href="/delete/deletearticle?id={{.Id}}" class="delete-link">Supprimer</a>
+  </div>
+  {{end}}
+</body>
+</html>
+{{end}}
